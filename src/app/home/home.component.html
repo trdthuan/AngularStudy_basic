@@ -1,0 +1,21 @@
+<p>home works!</p>
+<span>{{Name}}</span>
+<span>{{Age}}</span>
+<button (click)="tangTuoi()">Tang tuoi</button>
+<br>
+<span
+    *ngIf="Age < 18 then condition1 else condition2"
+></span>
+<ng-template #condition1>Nhỏ hơn 18</ng-template>
+<ng-template #condition2>Lớn hơn 18</ng-template>
+<!-- <span *ngIf = "Age < 18">Nhỏ hơn 18</span>
+<span *ngIf = "Age >= 18">Lon hon 18</span> -->
+<br/> <br/>
+<ul>
+    <li *ngFor = "let vehicle of Vehicles">{{vehicle}}</li>
+</ul>
+<br/>
+<span>{{Vehicles | json}}</span>
+
+<br/>
+<input [(ngModel)]="Name" />
